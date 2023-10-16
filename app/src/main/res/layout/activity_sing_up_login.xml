@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".SingUpLoginActivity">
+
+    <TextView
+        android:id="@+id/firstName"
+        android:textSize="@dimen/_15sdp"
+        android:hint="First Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/lastName"
+        android:layout_width="match_parent"
+        android:ems="10"
+        android:hint="Last Name"
+        android:inputType="text"
+        android:textSize="@dimen/_15sdp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp" />
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:textSize="@dimen/_15sdp"
+        android:hint="Email"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textSize="@dimen/_15sdp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/com_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_15sdp"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:hint="Confirm Password"
+        android:inputType="text"
+         />
+
+    <Button
+        android:id="@+id/signUpLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_15sdp"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Sign Up" />
+
+    <TextView
+        android:id="@+id/switch_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:textSize="@dimen/_15sdp"
+        android:inputType="text"
+        android:text="Alredy Have an account ? Login" />
+
+    <Button
+        android:id="@+id/facebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_15sdp"
+        android:layout_margin="10dp"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        app:strokeColor = "#f67b8b"
+        android:drawableLeft="@drawable/facebook"
+        android:text="Facebook" />
+
+    <Button
+        android:id="@+id/google"
+        android:layout_width="match_parent"
+        android:drawableLeft="@drawable/google"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_15sdp"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        app:strokeColor = "#f67b8b"
+        android:layout_margin="10dp"
+        android:text="Google" />
+</LinearLayout>
