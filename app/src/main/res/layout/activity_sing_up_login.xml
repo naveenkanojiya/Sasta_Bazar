@@ -8,50 +8,50 @@
     android:layout_height="match_parent"
     tools:context=".SingUpLoginActivity">
 
-    <TextView
+    <EditText
         android:id="@+id/firstName"
         android:textSize="@dimen/_15sdp"
         android:hint="First Name"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_margin="10dp"
         android:ems="10"
         android:inputType="text" />
 
-    <TextView
+    <EditText
         android:id="@+id/lastName"
         android:layout_width="match_parent"
         android:ems="10"
         android:hint="Last Name"
         android:inputType="text"
         android:textSize="@dimen/_15sdp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_margin="10dp" />
 
-    <TextView
+    <EditText
         android:id="@+id/email"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_margin="10dp"
         android:ems="10"
         android:textSize="@dimen/_15sdp"
         android:hint="Email"
         android:inputType="text" />
 
-    <TextView
+    <EditText
         android:id="@+id/pass"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_margin="10dp"
         android:textSize="@dimen/_15sdp"
         android:ems="10"
         android:hint="Password"
         android:inputType="text" />
 
-    <TextView
+    <EditText
         android:id="@+id/com_pass"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:textSize="@dimen/_15sdp"
         android:layout_margin="10dp"
         android:ems="10"
@@ -69,10 +69,10 @@
         android:inputType="text"
         android:text="Sign Up" />
 
-    <TextView
+    <EditText
         android:id="@+id/switch_text"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_margin="10dp"
         android:ems="10"
         android:textSize="@dimen/_15sdp"
