@@ -10,6 +10,8 @@ import com.example.sastabazar.databinding.FragmentDashBoardBinding
 class DashBoardFragment : Fragment() {
 
     lateinit var binding: FragmentDashBoardBinding
+    lateinit var productList: ArrayList<ProductModel>
+    lateinit var adapter: ProductAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -25,6 +27,16 @@ class DashBoardFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        productList = ArrayList()
+        productList = getProductData()
+
+        adapter = ProductAdapter(requireContext(),productList)
+        binding.mainRv.adapter=adapter
+
+    }
+
+    private fun getProductData(): ArrayList<ProductModel> {
+        var tempProductList = arrayListOf<ProductModel>()
     }
 
     companion object {
