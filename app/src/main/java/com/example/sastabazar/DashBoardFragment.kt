@@ -37,6 +37,7 @@ class DashBoardFragment : Fragment() {
 
     private fun getProductData(): ArrayList<ProductModel> {
         var tempProductList = arrayListOf<ProductModel>()
+
     }
 
     companion object {
