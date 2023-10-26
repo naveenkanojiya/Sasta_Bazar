@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.example.sastabazar.databinding.FragmentDashBoardBinding
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.toObject
@@ -31,7 +32,6 @@ class DashBoardFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         productList = ArrayList()
-        productList = getProductData()
 
         adapter = ProductAdapter(requireContext(),productList)
         binding.mainRv.adapter=adapter
@@ -39,18 +39,24 @@ class DashBoardFragment : Fragment() {
 
     }
 
-    private fun getProductData(): ArrayList<ProductModel> {
-        var tempProductList = arrayListOf<ProductModel>()
+    private fun getProductData() {
 
         Firebase.firestore.collection("Product").get().addOnSuccessListener {
-            for (i in it.documents){
 
+            productList.clear()
+            for (i in it.documents){
                 var tempProductModel = i.toObject<ProductModel>()
-                tempProductList.add(tempProductModel!!)
+               productList.add(tempProductModel!!)
+
+                Toast.makeText(requireContext(),"Run",Toast.LENGTH_SHORT).show()
             }
-            return@addOnSuccessListener
+            adapter = ProductAdapter(requireContext(),productList)
+            binding.mainRv.adapter = adapter
+
         }
-        return tempProductList
+            .addOnFailureListener {
+                Toast.makeText(requireContext(),it.localizedMessage,Toast.LENGTH_SHORT).show()
+            }
 
     }
 
