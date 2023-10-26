@@ -6,6 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.sastabazar.databinding.FragmentDashBoardBinding
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.firestore.toObject
+import com.google.firebase.ktx.Firebase
 
 class DashBoardFragment : Fragment() {
 
@@ -32,11 +35,22 @@ class DashBoardFragment : Fragment() {
 
         adapter = ProductAdapter(requireContext(),productList)
         binding.mainRv.adapter=adapter
+        getProductData()
 
     }
 
     private fun getProductData(): ArrayList<ProductModel> {
         var tempProductList = arrayListOf<ProductModel>()
+
+        Firebase.firestore.collection("Product").get().addOnSuccessListener {
+            for (i in it.documents){
+
+                var tempProductModel = i.toObject<ProductModel>()
+                tempProductList.add(tempProductModel!!)
+            }
+            return@addOnSuccessListener
+        }
+        return tempProductList
 
     }
 
