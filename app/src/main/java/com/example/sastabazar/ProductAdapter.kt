@@ -21,5 +21,6 @@ class ProductAdapter(var context:Context, var productList: ArrayList<ProductMode
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
+
     }
 }

@@ -35,11 +35,8 @@ class DashBoardFragment : Fragment() {
 
         adapter = ProductAdapter(requireContext(),productList)
         binding.mainRv.adapter=adapter
-        getProductData()
 
-    }
 
-    private fun getProductData() {
 
         Firebase.firestore.collection("Product").get().addOnSuccessListener {
 
@@ -50,8 +47,10 @@ class DashBoardFragment : Fragment() {
 
                 Toast.makeText(requireContext(),"Run",Toast.LENGTH_SHORT).show()
             }
-            adapter = ProductAdapter(requireContext(),productList)
-            binding.mainRv.adapter = adapter
+//            adapter = ProductAdapter(requireContext(),productList)
+//            binding.mainRv.adapter = adapter
+
+            adapter.notifyDataSetChanged()
 
         }
             .addOnFailureListener {
