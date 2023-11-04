@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
 import com.example.sastabazar.databinding.RvItemBinding
 
 class ProductAdapter(var context:Context, var productList: ArrayList<ProductModel>) : RecyclerView.Adapter<ProductAdapter.ViewHolder>(){
@@ -20,6 +21,12 @@ class ProductAdapter(var context:Context, var productList: ArrayList<ProductMode
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+
+        holder.binding.productImg.load(productList.get(position).imageUrl)
+
+        holder.binding.productName.text = productList.get(position).name
+        holder.binding.productCode.text = productList.get(position).productCode
+        holder.binding.price.text = productList.get(position).price.toString()
 
 
     }
