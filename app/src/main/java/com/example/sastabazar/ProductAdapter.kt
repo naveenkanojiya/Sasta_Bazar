@@ -22,7 +22,10 @@ class ProductAdapter(var context:Context, var productList: ArrayList<ProductMode
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-        holder.binding.productImg.load(productList.get(position).imageUrl)
+
+        holder.binding.productImg.load(productList.get(position).imageUrl){
+            placeholder(R.drawable.image)
+        }
 
         holder.binding.productName.text = productList.get(position).name
         holder.binding.productCode.text = productList.get(position).productCode

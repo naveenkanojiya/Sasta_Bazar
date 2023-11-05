@@ -44,8 +44,6 @@ class DashBoardFragment : Fragment() {
             for (i in it.documents){
                 var tempProductModel = i.toObject<ProductModel>()
                productList.add(tempProductModel!!)
-
-                Toast.makeText(requireContext(),"Run",Toast.LENGTH_SHORT).show()
             }
 //            adapter = ProductAdapter(requireContext(),productList)
 //            binding.mainRv.adapter = adapter
