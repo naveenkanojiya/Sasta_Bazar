@@ -1,6 +1,7 @@
 package com.example.sastabazar
 
 class ProductModel (
+    var id :String? = null,
     var name:String?=null,
     var price:Double?=null,
     var disp:String?=null,
