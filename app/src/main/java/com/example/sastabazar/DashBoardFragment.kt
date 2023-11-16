@@ -42,8 +42,10 @@ class DashBoardFragment : Fragment() {
 
             productList.clear()
             for (i in it.documents){
+
                 var tempProductModel = i.toObject<ProductModel>()
-               productList.add(tempProductModel!!)
+                tempProductModel?.id = i.id
+                productList.add(tempProductModel!!)
             }
 //            adapter = ProductAdapter(requireContext(),productList)
 //            binding.mainRv.adapter = adapter

@@ -1,6 +1,7 @@
 package com.example.sastabazar
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -28,8 +29,11 @@ class ProductAdapter(var context:Context, var productList: ArrayList<ProductMode
         }
 
         holder.binding.productName.text = productList.get(position).name
-        holder.binding.productCode.text = productList.get(position).productCode
+        holder.binding.productCode.text = productList.get(position).id
         holder.binding.price.text = productList.get(position).price.toString()
+        holder.itemView.setOnClickListener {
+            context.startActivity(Intent(context,DetailsActivity::class.java))
+        }
 
 
     }

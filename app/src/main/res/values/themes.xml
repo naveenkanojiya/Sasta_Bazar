@@ -6,5 +6,10 @@
         <item name="colorPrimary">#F68b8b</item>
     </style>
 
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">#767474</item>
+        <item name="colorControlActivated">#F4C32E</item>
+    </style>
+
     <style name="Theme.SastaBazar" parent="Base.Theme.SastaBazar" />
 </resources>
