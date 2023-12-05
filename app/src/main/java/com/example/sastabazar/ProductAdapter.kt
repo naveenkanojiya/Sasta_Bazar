@@ -32,7 +32,7 @@ class ProductAdapter(var context:Context, var productList: ArrayList<ProductMode
         holder.binding.productCode.text = productList.get(position).id
         holder.binding.price.text = productList.get(position).price.toString()
         holder.itemView.setOnClickListener {
-            context.startActivity(Intent(context,DetailsActivity::class.java))
+            context.startActivity(Intent(context,DetailsActivity::class.java).putExtra("PRODUCT_ID",productList.get(position).id))
         }
 
 

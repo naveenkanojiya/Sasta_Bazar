@@ -38,7 +38,7 @@ class DashBoardFragment : Fragment() {
 
 
 
-        Firebase.firestore.collection("Product").get().addOnSuccessListener {
+        Firebase.firestore.collection("Product").limit(10).get().addOnSuccessListener {
 
             productList.clear()
             for (i in it.documents){

@@ -13,7 +13,7 @@
         android:layout_weight="1">
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/product_image"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:scaleType="fitXY"
@@ -29,7 +29,7 @@
             android:layout_height="@dimen/_70sdp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/imageView3"
+            app:layout_constraintStart_toStartOf="@+id/product_image"
             app:srcCompat="@drawable/bottom_bg" />
 
         <RatingBar
@@ -38,8 +38,8 @@
             android:layout_height="wrap_content"
             android:theme="@style/RatingBar"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/imageView3"
-            app:layout_constraintTop_toTopOf="@+id/imageView3"
+            app:layout_constraintStart_toStartOf="@+id/product_image"
+            app:layout_constraintTop_toTopOf="@+id/product_image"
             app:layout_constraintVertical_bias="0.907" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
